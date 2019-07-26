@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBoot演示</title>
+</head>
+<body>
+<p>
+    欢迎你 ：
+    <span th:text="${username} ?: '匿名用户' " style="color: red"></span>
+</p>
+</body>
+</html>

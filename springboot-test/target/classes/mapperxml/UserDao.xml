@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.test.springboottest.dao.UserDao">
+    <resultMap id="UserResult" type="com.springboot.test.springboottest.entity.User">
+        <result property="id" column="id" />
+        <result property="userName" column="user_name" />
+        <result property="password" column="password" />
+        <result property="name" column="name" />
+        <result property="mobile" column="mobile" />
+        <result property="sex" column="sex" />
+        <result property="email" column="email" />
+    </resultMap>
+
+    <insert id="insert" parameterType="com.springboot.test.springboottest.entity.User">
+        insert into
+        `user`
+        (
+        `user_name`,
+        `password`,
+        `name`,
+        `sex`,
+        `mobile`,
+        `email`
+        )
+        values
+        (
+        #{userName},
+        #{password},
+        #{name},
+        #{sex},
+        #{mobile},
+        #{email}
+        )
+
+    </insert>
+    <select id="get" parameterType="java.lang.Integer" resultType="com.springboot.test.springboottest.entity.User">
+        select * from
+        `user`
+        where
+        id=#{id}
+    </select>
+
+
+<!--    <sql id="queryCondition">-->
+<!--        -->
+<!--        -->
+<!--    </sql>-->
+</mapper>

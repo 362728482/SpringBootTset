@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+       <meta charset="UTF-8">
+       <title>SpringBoot演示</title>
+</head>
+<body>
+   注册用户
+</p>
+
+<br method="post" th:action="@{/save}">
+
+    用户名：<input type="text" name="userName"><br>
+    用户密码：<input type="text" name="password"><br>
+    真实姓名：<input type="text" name="name"><br>
+    手机号：<input type="text" name="mobile"><br>
+    性别：<input name="sex" type="radio" checked="checked" value="1"/>男
+         <input name="sex" type="radio" value="2" />女
+         <input name="sex" type="radio" value="0" />保密<br>
+    电子邮件：<input type="text" name="email"><br>
+    头像<input type="file" name="imageFile" id="imageFile" data-options="prompt:'Choose a file...'" style="width:80%" /></br>
+    <button type="submit">提交</button>
+</form>
+
+</body>
+</html>

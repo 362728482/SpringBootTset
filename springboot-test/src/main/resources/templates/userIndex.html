@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+       <meta charset="UTF-8">
+       <title>SpringBoot演示</title>
+</head>
+<body>
+   注册用户
+</p>
+
+<br method="post" th:action="@{/save}">
+
+    用户名：<input type="text" name="userName"><br>
+    用户密码：<input type="text" name="password"><br>
+     <button type="submit" onclick="checkPassword(userName,password)">提交</button>
+
+
+
+</form>
+
+</body>
+<script>
+    function checkPassword(userName,password) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+            }
+        };
+        xhttp.open("GET", "ajax_info.txt", true);
+        xhttp.send();
+    }
+</script>
+</html>
